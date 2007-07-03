@@ -1,6 +1,6 @@
 %define	name	yafc
 %define	version	1.1.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Yafc - yet another ftp client
 Name:		%{name}
@@ -11,7 +11,7 @@ Group:		Networking/File transfer
 URL:		http://yafc.sourceforge.net/
 Source0:	http://download.sourceforge.net/yafc/%{name}-%{version}.tar.bz2
 Patch:		yafc-1.1-gcc.patch
-BuildRequires:	readline-devel
+BuildRequires:	readline-devel ncurses-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
