@@ -12,7 +12,6 @@ URL:		http://yafc.sourceforge.net/
 Source0:	http://download.sourceforge.net/yafc/%{name}-%{version}.tar.bz2
 Patch:		yafc-1.1-gcc.patch
 BuildRequires:	readline-devel ncurses-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Yafc is yet another ftp client, similar to ftp(1).
