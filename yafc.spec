@@ -1,6 +1,6 @@
 %define	name	yafc
 %define	version	1.1.1
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:	Yafc - yet another ftp client
 Name:		%{name}
