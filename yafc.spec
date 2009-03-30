@@ -11,7 +11,8 @@ Group:		Networking/File transfer
 URL:		http://yafc.sourceforge.net/
 Source0:	http://download.sourceforge.net/yafc/%{name}-%{version}.tar.bz2
 Patch:		yafc-1.1-gcc.patch
-BuildRequires:	readline-devel ncurses-devel
+Patch1:		yafc-1.1.1-format.patch
+BuildRequires:	readline-devel ncurses-devel heimdal-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -40,8 +41,10 @@ FEATURES
 %prep
 %setup -q
 %patch -p1 -b .gcc
+%patch1 -p1 -b .format
 
 %build
+autoreconf
 %configure \
 	--without-krb4
 %make
