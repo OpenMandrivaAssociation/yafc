@@ -1,6 +1,6 @@
 %define	name	yafc
 %define	version	1.1.1
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary:	Yafc - yet another ftp client
 Name:		%{name}
@@ -44,16 +44,14 @@ FEATURES
 %patch1 -p1 -b .format
 
 %build
-autoreconf
-%configure \
+autoreconf -fi
+%configure2_5x \
 	--without-krb4
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{makeinstall}
-
-rm -f %buildroot%{_infodir}/dir
+%{makeinstall_std}
 
 %find_lang %{name}
 
@@ -72,4 +70,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_infodir}/*
 %{_mandir}/man1/*
-
