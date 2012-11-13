@@ -1,0 +1,11 @@
+--- yafc-1.1.1/src/commands.c~	2003-07-12 12:25:41.000000000 +0200
++++ yafc-1.1.1/src/commands.c	2009-03-31 01:00:13.000000000 +0200
+@@ -486,7 +486,7 @@
+ 	while((c = getopt_long(argc, argv, "h", longopts, 0)) != EOF) {
+ 		switch(c) {
+ 		  case 'h':
+-			fprintf(stderr, help);
++			fprintf(stderr, "%s", help);
+ 		  case '?':
+ 			optind = -1;
+ 			return;
