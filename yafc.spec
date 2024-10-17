@@ -8,7 +8,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		Networking/File transfer
-URL:		http://yafc.sourceforge.net/
+URL:		https://yafc.sourceforge.net/
 Source0:	http://download.sourceforge.net/yafc/%{name}-%{version}.tar.bz2
 Patch:		yafc-1.1-gcc.patch
 Patch1:		yafc-1.1.1-format.patch
